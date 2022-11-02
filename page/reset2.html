@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="left-content">
+        <div class="overlay-reset">
+          <img
+            class="brand"
+            src="../asset/logo/tickitz.svg"
+            alt="tickitz logo"
+          />
+          <div class="label">
+            <h1>Lets reset your password</h1>
+            <p>
+              To be able to use your account again, please complete the
+              following steps.
+            </p>
+          </div>
+          <nav>
+            <div class="nav-item" id="step-1">
+              <div class="number-box">1</div>
+              <p class="text-nav">Fill your complete email</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-2">
+              <div class="number-box">2</div>
+              <p class="text-nav">Check your email</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-3">
+              <div class="number-box active-num">3</div>
+              <p class="text-nav active-text">Enter your new password</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-3">
+              <div class="number-box">4</div>
+              <p class="text-nav">Done</p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="right-content reset-right">
+        <img class="brand-form" src="../asset/logo/tikitz-blue.svg" alt="logo tickitz">
+        <h1 class="title">Fill your complete password</h1>
+        <h1 class="res-mobile hidden">Forgot Password</h1>
+        <p class="desc">set your new password</p>
+        <form action="">
+          <div class="input-part">
+            <label for="password">Password</label>
+            <div class="wrap-pass">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Write your password"
+                required
+              />
+              <img
+                class="eye"
+                src="../asset/logo/eye.svg"
+                alt="show-password"
+                onclick="showPass('password')"
+              />
+            </div>
+          </div>
+          <div class="input-part">
+            <label for="password">Confirm Password</label>
+            <div class="wrap-pass">
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                placeholder="Write your confirm password"
+                required
+              />
+              <img
+                class="eye"
+                src="../asset/logo/eye.svg"
+                alt="show-password"
+                onclick="showPass('password2')"
+              />
+            </div>
+          </div>
+          <button class="btn-login"><a href="./home-withuser.html">Submit</a></button>
+        </form>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

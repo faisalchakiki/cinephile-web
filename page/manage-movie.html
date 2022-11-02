@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="global navbar">
+      <img
+        class="brand-home"
+        src="../asset/logo/tikitz-blue.svg"
+        alt="logo Tickitz"
+      />
+      <div class="item-nav">
+        <a href="./home-withuser.html">Home</a>
+        <a href="./list-movie.html">List Movie</a>
+      </div>
+      <div class="search-tool">
+        <form action="">
+            <img src="../asset/logo/search-tool.svg" alt="searching" />
+            <input class="hidden" type="text" placeholder="Search Movie Name ..."/>
+        </form>
+      </div>
+      <div class="avatar">
+        <img src="../asset/img/avatar.png" alt="avatar" />
+        <div class="option hidden">
+          <a href="./profil-user.html">Profil</a>
+          <a href="./sign-in.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <main class="manage global">
+      <h3>Form Movie</h3>
+      <div class="container-manage">
+        <form action="">
+          <div class="top-content-manage">
+            <section class="left-content-manage">
+              <div class="wrap-img">
+                <img src="../asset/img/movie.png" alt="" />
+              </div>
+            </section>
+            <section class="right-content-manage">
+              <div class="wrap-input">
+                <div class="input-part">
+                  <label for="m-name">Movie Name</label>
+                  <input
+                    id="m-name"
+                    type="text"
+                    value="Spider-Man: Homecoming"
+                  />
+                </div>
+                <div class="input-part">
+                  <label for="genre">Category</label>
+                  <input
+                    id="genre"
+                    type="text"
+                    value="Action, Adventure, Sci-Fi"
+                  />
+                </div>
+              </div>
+              <div class="wrap-input">
+                <div class="input-part">
+                  <label for="director">Director</label>
+                  <input id="director" type="text" value="Jon Watts" />
+                </div>
+                <div class="input-part">
+                  <label for="casts">Casts</label>
+                  <input
+                    id="casts"
+                    type="text"
+                    value="Tom Holland, Michael Keaton, Robert Dow.."
+                  />
+                </div>
+              </div>
+              <div class="wrap-input">
+                <div class="input-part">
+                  <label for="date">Release date</label>
+                  <input id="date" type="text" value="07/05/2020" />
+                </div>
+                <div class="wrapInt">
+                  <div class="input-part">
+                    <label for="hour">Duration Hour</label>
+                    <input id="hour" type="text" value="2" />
+                  </div>
+                  <div class="input-part">
+                    <label for="minute">Duration Minute</label>
+                    <input id="minute" type="text" value="13" />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="bottom-content-manage">
+            <div class="input-part">
+              <label for="synopsis">Synopsis</label>
+              <textarea id="synopsis">Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May</textarea>
+            </div>
+            <div class="wrap-btn">
+              <button class="btn-reset" type="reset">Reset</button>
+              <button class="btn-submit" type="submit">Submit</button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+    <footer class="global">
+      <div class="content-footer">
+        <section class="logo-foot">
+          <img src="../asset/logo/tikitz-blue.svg" alt="logo" />
+          <p class="motto-foot">
+            Stop waiting in line. Buy tickets
+            <br />
+            conveniently, watch movies quietly.
+          </p>
+        </section>
+        <section class="explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="" class="list-foot">Home</a></li>
+            <li><a href="" class="list-foot">List Movie</a></li>
+          </ul>
+        </section>
+        <section class="sponsor">
+          <h4>Our Sponsor</h4>
+          <img src="../asset/logo/ebu.svg" alt="ebu.id" />
+          <img src="../asset/logo/cineone.svg" alt="cineOne21" />
+          <img src="../asset/logo/hiflix.svg" alt="hiflix" />
+        </section>
+        <section class="followUs">
+          <h4>Follow Us</h4>
+          <div class="sosmed">
+            <img src="../asset/logo/facebook.svg" alt="facebook" />
+            <a href="" class="name-sosmed">Tickitz Cinema id</a>
+          </div>
+          <div class="sosmed">
+            <img src="../asset/logo/instagram.svg" alt="instagram" />
+            <a href="" class="name-sosmed">tickitz.id</a>
+          </div>
+          <div class="sosmed">
+            <img src="../asset/logo/twiter.svg" alt="twiter" />
+            <a href="" class="name-sosmed">tickitz.id</a>
+          </div>
+          <div class="sosmed">
+            <img src="../asset/logo/youtube.svg" alt="youtube" />
+            <a href="" class="name-sosmed">Tickitz Cinema id</a>
+          </div>
+        </section>
+      </div>
+      <div class="text-footer">© 2020 Tickitz. All Rights Reserved.</div>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

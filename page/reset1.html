@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="left-content">
+        <div class="overlay-reset">
+          <img class="brand" src="../asset/logo/tickitz.svg" alt="tickitz logo" />
+          <div class="label">
+            <h1>Lets reset your password</h1>
+            <p>To be able to use your account again, please complete the following steps.</p>
+          </div>
+          <nav>
+            <div class="nav-item" id="step-1">
+              <div class="number-box active-num">1</div>
+              <p class="text-nav active-text">Fill your complete email</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-2">
+              <div class="number-box">2</div>
+              <p class="text-nav">Check your email</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-3">
+              <div class="number-box">3</div>
+              <p class="text-nav">Enter your new password</p>
+            </div>
+            <hr class="line" />
+            <div class="nav-item" id="step-3">
+              <div class="number-box">4</div>
+              <p class="text-nav">Done</p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="right-content reset-right">
+        <img class="brand-form" src="../asset/logo/tikitz-blue.svg" alt="logo tickitz">
+        <h1 class="title">Fill your complete email</h1>
+        <h1 class="res-mobile hidden">Forgot Email</h1>
+        <p class="desc">
+            we'll send a link to your email shortly
+        </p>
+        <form action="">
+          <div class="input-part">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Write your email"
+              required
+            />
+          </div>
+          <button class="btn-login"><a href="./reset2.html">Send</a></button>
+        </form>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

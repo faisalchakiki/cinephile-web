@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tickitz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="left-content">
+        <div class="overlay">
+          <img
+            class="logo"
+            src="../asset/logo/tickitz.svg"
+            alt="tickitz logo"
+          />
+          <p class="motto">wait, watch, wow!</p>
+        </div>
+      </section>
+      <section class="right-content">
+        <img class="brand-form" src="../asset/logo/tikitz-blue.svg" alt="logo tickitz">
+        <h1 class="black">Sign In</h1>
+        <p class="desc">
+          Sign in with your data that you entered during your registration
+        </p>
+        <form action="">
+          <div class="input-part">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Write your email"
+              required
+            />
+          </div>
+          <div class="input-part">
+            <label for="password">Password</label>
+            <div class="wrap-pass">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Write your password"
+                required
+              />
+              <img
+                class="eye"
+                src="../asset/logo/eye.svg"
+                alt="show-password"
+                onclick="showPass('password')"
+              />
+            </div>
+          </div>
+          <button class="btn-login"><a href="./home-withuser.html">Sign In</a></button>
+        </form>
+        <p class="regist-quest">
+          Forgot your password?
+          <a class="underline" href="./reset1.html"> Reset now</a>
+        </p>
+        <p class="regist-quest">
+          Don’t have an account?
+          <a class="underline" href="./sign-up.html"> Sign Up</a>
+        </p>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

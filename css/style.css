@@ -109,6 +109,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
   text-align: center;
+  color: #fff;
 }
 
 button a {
@@ -325,6 +326,7 @@ nav .search-tool {
 
 .search-tool:hover input {
   display: block;
+  outline: none;
 }
 
 .search-tool:hover img {
@@ -463,6 +465,10 @@ main .content {
   position: relative;
 }
 
+.box-movie h4{
+  margin-top: 10px;
+}
+
 .box-active:hover > h4,
 .box-active:hover > .genre,
 .box-active:hover > .details {
@@ -572,7 +578,7 @@ main.upcoming {
   background-color: #5f2eea;
   color: #ffffff;
 }
-.details a:hover {
+a:hover {
   color: #fff;
 }
 .member {
@@ -718,7 +724,7 @@ footer a:hover {
 
 /* List Movie */
 main.list-movie-content {
-  background-color: #d6d8e7;
+  background-color: #f5f6f8;
   height: auto;
   padding: 50px 0;
   display: flex;
@@ -798,7 +804,8 @@ main.list-movie-content {
   transition: 0.3s;
 }
 
-.nav-number:hover {
+.nav-number:hover,
+.nav-box-number .active-num-box {
   background: #5f2eea;
   box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
   color: #ffffff;
@@ -1642,7 +1649,7 @@ main.list-movie-content {
 }
 
 .card-ticket {
-  width: 600px;
+  width: 750px;
   display: flex;
   text-align: left;
   overflow: hidden;
@@ -1659,6 +1666,11 @@ main.list-movie-content {
 
 .right-ticket {
   flex: 1;
+}
+
+.right-ticket .body-ticket {
+  display: flex;
+  align-items: center;
 }
 
 .head-ticket {
@@ -1999,8 +2011,14 @@ main.list-movie-content {
     margin-right: 20px;
   }
   /* ticket */
-  .container-ticket{
+  .container-ticket {
     width: 95%;
+    background-color: transparent;
+    padding: 0;
+  }
+  .left-ticket .body-ticket::after,
+  .left-ticket .head-ticket::after {
+    background-color: #f5f6f8;
   }
 }
 
@@ -2318,18 +2336,18 @@ main.list-movie-content {
     flex-direction: column-reverse;
     width: 100%;
   }
-  .order-history .nav-profil{
+  .order-history .nav-profil {
     margin-top: -40px;
   }
-  .name-person{
+  .name-person {
     font-weight: 600;
     font-size: 5vw;
   }
-  .status-person{
+  .status-person {
     font-size: 4vw;
   }
   .personal-info > div,
-  .change-pass{
+  .change-pass {
     display: block;
   }
   .wrap-phone-num p {
@@ -2343,16 +2361,16 @@ main.list-movie-content {
     top: 10px;
     left: 30px;
   }
-  .right-content-profil .btn-profil{
+  .right-content-profil .btn-profil {
     width: 60%;
   }
   /* ticket */
-  .container-ticket{
-    background-color: transparent;
-    padding: 0;
-  }
-  .card-ticket{
+  .card-ticket {
     width: 100%;
+  }
+  .barcode {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -2416,63 +2434,65 @@ main.list-movie-content {
   .left-content-profil {
     width: 70%;
   }
-  .right-head-history img{
+  .right-head-history img {
     width: 30vw;
     margin-bottom: 20px;
   }
-  .foot-ticket-history .label-order{
+  .foot-ticket-history .label-order {
     width: 45%;
   }
-  .profil .right-content-profil .nav-profil{
+  .profil .right-content-profil .nav-profil {
     padding: 20px;
     justify-content: space-between;
   }
-  .nav-profil a{
+  .nav-profil a {
     margin: 0;
   }
-  .right-content-profil .btn-profil{
+  .right-content-profil .btn-profil {
     width: 100%;
   }
   /* ticket */
-.card-ticket {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-.card-ticket .head-ticket {
-  display: none;
-}
-.right-ticket .body-ticket{
-  border: none;
-  border-radius: 25px;
-}
-.left-ticket{
-  border: none;
-}
-.left-ticket .body-ticket{
-  border-radius: 5px 5px 20px 20px;
-  text-align: center;
-}
-.left-ticket .body-ticket::after{
-  content: none;
-}
-.wrap-qr-code {
-  background-color: #fff;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.barcode {
-  width: 168px;
-  height: 168px;
-}
-.wrap-info-ticket{
-  flex-direction: column;
-}
-.card-ticket > div > div {
-  padding: 10px 5px;
-}
-}
+  .card-ticket {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .card-ticket .head-ticket {
+    display: none;
+  }
+  .right-ticket .body-ticket {
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  .left-ticket {
+    border: none;
+  }
+  .left-ticket .body-ticket {
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+  }
+  .left-ticket .body-ticket::after {
+    content: none;
+  }
+  .barcode {
+    width: 168px;
+    height: 168px;
+  }
+  .card-ticket > div > div {
+    padding: 10px 5px;
+  }
+  .info-ticket span{
+    font-size: 12px;
+  }
+  .info-ticket p, .info-ticket p.price{
+    font-size: 12px;
+    max-height: 50px;
+  }
+  .body-ticket{
+    border: none;
+  }
+} 
 
 .hidden {
   display: none;

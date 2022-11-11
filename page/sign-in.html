@@ -26,9 +26,10 @@
         <p class="desc">
           Sign in with your data that you entered during your registration
         </p>
-        <form action="">
+        <form action="" id="login-form">
           <div class="input-part">
             <label for="email">Email</label>
+            <div class="alert hidden val-email">*Email anda kurang tepat</div>
             <input
               type="email"
               id="email"
@@ -39,6 +40,7 @@
           </div>
           <div class="input-part">
             <label for="password">Password</label>
+            <div class="alert hidden val-pass">*Password anda kurang tepat</div>
             <div class="wrap-pass">
               <input
                 type="password"
@@ -55,7 +57,7 @@
               />
             </div>
           </div>
-          <button class="btn-login"><a href="./home-withuser.html">Sign In</a></button>
+          <button type="submit" class="btn-login"><a>Sign In</a></button>
         </form>
         <p class="regist-quest">
           Forgot your password?
@@ -67,6 +69,7 @@
         </p>
       </section>
     </main>
+    <script src="../js/login.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

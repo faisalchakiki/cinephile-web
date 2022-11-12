@@ -155,7 +155,7 @@ button a {
   display: none;
 }
 
-.alert{
+.alert {
   color: red;
   font-size: 14px;
   margin-bottom: -5px;
@@ -263,6 +263,7 @@ main ::-webkit-scrollbar {
   display: flex;
   align-items: center;
   height: 60px;
+  z-index: 99;
 }
 
 .navbar .brand-home {
@@ -437,12 +438,18 @@ main .global {
 }
 
 .header-main a,
-.upcoming a {
+.h-upcoming a {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.15px;
   color: #5f2eea;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-main a:hover,
+.h-upcoming a:hover {
+  color: #321091;
 }
 
 main .content {
@@ -471,7 +478,7 @@ main .content {
   position: relative;
 }
 
-.box-movie h4{
+.box-movie h4 {
   margin-top: 10px;
 }
 
@@ -751,11 +758,12 @@ main.list-movie-content {
   background: #fcfdfe;
   border: 1px solid #dedede;
   border-radius: 16px;
-  padding: 16px 10px;
+  padding: 16px 0;
   margin-right: 20px;
 }
 
 .sort select {
+  cursor: pointer;
   background: #fcfdfe;
   border: none;
   width: 100px;
@@ -763,6 +771,7 @@ main.list-movie-content {
   letter-spacing: 0.75px;
   color: #4e4b66;
   outline: none;
+  padding: 0 5px;
 }
 
 .search-movie input {
@@ -1560,7 +1569,7 @@ main.list-movie-content {
 }
 
 .contact-person .wrap-phone-num input {
-  padding-left: 25%;
+  padding-left: 80px;
 }
 
 .box-profil .input-part {
@@ -2391,6 +2400,10 @@ main.list-movie-content {
     position: absolute;
     top: 28px;
   }
+  .header-main,
+  .h-upcoming {
+    align-items: flex-start;
+  }
   .upcoming section h2,
   .movie section h2,
   .header-main a,
@@ -2429,6 +2442,9 @@ main.list-movie-content {
     margin: 0 0 20px;
   }
   /* Order page */
+  .order-ticket h3 , .order-ticket h2{
+    font-size: 20px;
+  }
   .main-info > div p,
   .main-info > div span {
     font-size: 16px;
@@ -2488,17 +2504,18 @@ main.list-movie-content {
   .card-ticket > div > div {
     padding: 10px 5px;
   }
-  .info-ticket span{
+  .info-ticket span {
     font-size: 12px;
   }
-  .info-ticket p, .info-ticket p.price{
+  .info-ticket p,
+  .info-ticket p.price {
     font-size: 12px;
     max-height: 50px;
   }
-  .body-ticket{
+  .body-ticket {
     border: none;
   }
-} 
+}
 
 .hidden {
   display: none;

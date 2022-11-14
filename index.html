@@ -44,10 +44,10 @@
           </ul>
           <div class="wrap-btn-nav">
             <a
-            class="signUp mx-auto d-grid my-2 my-md-0"
-            href="./page/sign-up.html"
-            >Sign Up</a
-          >
+              class="signUp mx-auto d-grid my-2 my-md-0"
+              href="./page/sign-up.html"
+              >Sign Up</a
+            >
           </div>
         </div>
       </div>
@@ -63,53 +63,13 @@
         <img src="./asset/img/Group 14.png" alt="example movie" />
       </section>
     </header>
+
     <main class="movie">
       <section class="global header-main">
         <h2>Now Showing</h2>
         <a href="">view all</a>
       </section>
-      <section class="content">
-        <div class="box-movie box-active">
-          <img src="./asset/img/movie.png" alt="movie" loading="lazy" />
-          <h4 class="title-movie hidden">Spider-Man: Homecoming</h4>
-          <div class="genre hidden">Acion, Adventure, Sci-FI</div>
-          <button class="details hidden">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="box-movie box-active">
-          <img src="./asset/img/movie.png" alt="movie" loading="lazy" />
-          <h4 class="title-movie hidden">Spider-Man: Homecoming</h4>
-          <div class="genre hidden">Acion, Adventure, Sci-FI</div>
-          <button class="details hidden">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="box-movie box-active">
-          <img src="./asset/img/movie.png" alt="movie" loading="lazy" />
-          <h4 class="title-movie hidden">Spider-Man: Homecoming</h4>
-          <div class="genre hidden">Acion, Adventure, Sci-FI</div>
-          <button class="details hidden">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="box-movie box-active">
-          <img src="./asset/img/movie.png" alt="movie" loading="lazy" />
-          <h4 class="title-movie hidden">Spider-Man: Homecoming</h4>
-          <div class="genre hidden">Acion, Adventure, Sci-FI</div>
-          <button class="details hidden">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="box-movie box-active">
-          <img src="./asset/img/movie.png" alt="movie" loading="lazy" />
-          <h4 class="title-movie hidden">Spider-Man: Homecoming</h4>
-          <div class="genre hidden">Acion, Adventure, Sci-FI</div>
-          <button class="details hidden">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-      </section>
+      <section class="content" id="content-movie"></section>
     </main>
     <main class="upcoming">
       <section class="global h-upcoming">
@@ -130,56 +90,7 @@
         <div class="box-month">November</div>
         <div class="box-month">December</div>
       </section>
-      <section class="uc-movies global">
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-        <div class="card-movie">
-          <img src="./asset/img/ex-movie2.png" alt="movie image" />
-          <h3 class="title-movie">Black Widow</h3>
-          <p class="genre">Action, Adventure, Sci-Fi</p>
-          <button class="details">
-            <a href="./page/details-noUser.html">Details</a>
-          </button>
-        </div>
-      </section>
+      <section class="uc-movies global" id="uc-movies"></section>
     </main>
     <section class="member">
       <div class="card-member">
@@ -198,6 +109,7 @@
         </p>
       </div>
     </section>
+    
     <footer class="global">
       <div class="content-footer">
         <div class="logo-foot">
@@ -259,6 +171,7 @@
       </div>
       <div class="text-footer">© 2020 Tickitz. All Rights Reserved.</div>
     </footer>
+    <script src="./js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

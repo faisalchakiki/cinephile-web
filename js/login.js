@@ -1,13 +1,24 @@
+// Show Password
+function showPass(password) {
+  var pass = document.getElementById(password);
+  if (pass.type === "password") {
+    pass.type = "text";
+  } else {
+    pass.type = "password";
+  }
+}
+
 // Validation login
 let alertEmail = document.querySelector(".val-email")
 let alertPass = document.querySelector(".val-pass")
 let login = document.getElementById("login-form")
-console.log(document)
 login.addEventListener("submit", (event)=>{
   event.preventDefault()
   let valueEmail = event.target.email.value
   let valuePass = event.target.password.value
-  if(valueEmail != "faisal@gmail.com"){
+  if(valueEmail == "root@admin.com" && valuePass == "rahasia"){
+    document.location.href = '../page/manage-movie.html'
+  }else if(valueEmail != "faisal@gmail.com"){
     alertEmail.classList.remove("hidden")
   }else if(valuePass != "123"){
     alertPass.classList.remove("hidden")

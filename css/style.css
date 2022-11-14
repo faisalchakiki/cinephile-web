@@ -285,12 +285,8 @@ main ::-webkit-scrollbar {
   color: #5f2eea;
 }
 
-.item-nav a:nth-child(1) {
-  margin-right: 60px;
-}
-
-.navbar .item-nav {
-  flex: 1;
+.nav-item.manage-nav a{
+  font-size: 15px;
 }
 
 .navbar a.signUp {
@@ -329,6 +325,7 @@ nav .search-tool {
   border-radius: 16px;
   margin-right: 20px;
   padding: 5px 5px 5px 40px;
+  font-size: 14px;
 }
 
 .search-tool:hover input {
@@ -338,7 +335,8 @@ nav .search-tool {
 
 .search-tool:hover img {
   position: absolute;
-  top: 11px;
+  width: 15px;
+  top: 8px;
   left: 12px;
 }
 
@@ -462,6 +460,7 @@ main .content {
 }
 
 .box-movie {
+  max-width: 230px;
   padding: 30px;
   background: rgba(255, 255, 255, 0.2);
   border: 3px solid #ffffff;
@@ -470,6 +469,11 @@ main .content {
   cursor: pointer;
   text-align: center;
   height: min-content;
+}
+
+.box-movie img{
+  width: 160px;
+  border-radius: 5px;
 }
 
 .box-movie:hover {
@@ -482,9 +486,7 @@ main .content {
   margin-top: 10px;
 }
 
-.box-active:hover > h4,
-.box-active:hover > .genre,
-.box-active:hover > .details {
+.box-active:hover > .text-movie {
   display: block;
 }
 
@@ -545,6 +547,7 @@ main.upcoming {
 }
 
 .card-movie {
+  max-width: 230px;
   background: #ffffff;
   border: 0.5px solid #dedede;
   border-radius: 8px;
@@ -557,10 +560,13 @@ main.upcoming {
 .card-movie img {
   height: auto;
   margin-bottom: 20px;
+  width: 150px;
 }
 
 .title-movie {
   margin: 10 0px;
+  font-weight: 600;
+  word-wrap: break-word;
 }
 
 .genre {
@@ -1078,7 +1084,8 @@ main.list-movie-content {
   flex: 1;
 }
 
-.container-order-content h3 {
+.container-order-content h3,
+.manage h3, .wrap-title h3 {
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 0.25px;
@@ -1835,8 +1842,8 @@ main.list-movie-content {
 /* Manage movie */
 .manage {
   background-color: #f5f6f8;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #4e4b66;
 }
 
@@ -1930,6 +1937,30 @@ main.list-movie-content {
 .wrap-btn {
   display: flex;
   justify-content: end;
+}
+
+a.update-data, a.delete-data {
+  display: inline-block;
+  width: 80%;
+  padding: 4px 0;
+  border: 1px solid;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
+
+a.update-data{
+  color: #5f2eea;
+  border-color: #5f2eea;
+}
+
+a.delete-data{
+  color: #ED2E7E;
+  border-color: #ED2E7E;
+}
+
+a.update-data:hover, a.delete-data:hover{
+  font-weight: 600;
 }
 /* Responsive */
 @media (max-width: 1200px) {
@@ -2096,6 +2127,7 @@ main.list-movie-content {
     border-radius: 0 0 20px 20px;
   }
   .search-tool input {
+    font-size: 18px;
     display: block;
     margin: 0;
   }

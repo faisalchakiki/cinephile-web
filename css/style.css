@@ -140,6 +140,10 @@ button a {
   color: #5f2eea;
 }
 
+.underline:hover {
+  color: #5238aa;
+}
+
 .wrap-pass {
   position: relative;
 }

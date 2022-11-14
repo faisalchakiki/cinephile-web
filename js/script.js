@@ -188,3 +188,35 @@ dataMovieUC.forEach((data) => {
   textMovie.appendChild(buttonDetail);
   cardMovie.appendChild(textMovie);
 });
+
+const wrapMovie = document.getElementById("movie-content");
+console.log
+dataMovie.forEach((data) => {
+  const boxMovie = document.createElement("div");
+  boxMovie.className = "box-movie box-active";
+  const picture = document.createElement("img");
+  picture.src = data.image;
+  picture.alt = "image-movie";
+  picture.loading = "lazy";
+  const textMovie = document.createElement("div");
+  textMovie.className = "text-movie hidden";
+  const titleMovie = document.createElement("h4");
+  titleMovie.className = "title-movie";
+  titleMovie.textContent = data.title;
+  const genre = document.createElement("p");
+  genre.className = "genre";
+  genre.textContent = data.genre;
+  const buttonDetail = document.createElement("button");
+  buttonDetail.className = "details";
+  const details = document.createElement("a");
+  details.href = "./page/details-noUser.html";
+  details.textContent = "Details";
+
+  wrapMovie.appendChild(boxMovie);
+  boxMovie.appendChild(picture);
+  textMovie.appendChild(titleMovie);
+  textMovie.appendChild(genre);
+  buttonDetail.appendChild(details);
+  textMovie.appendChild(buttonDetail);
+  boxMovie.appendChild(textMovie);
+});

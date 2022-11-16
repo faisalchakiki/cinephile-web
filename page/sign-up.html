@@ -19,7 +19,7 @@
         <img class="brand-form" src="../asset/logo/tikitz-blue.svg" alt="logo tickitz">
         <h1 class="black">Sign Up</h1>
         <p class="desc">Fill your additional details</p>
-        <form action="">
+        <form action="" id="register-form">
           <div class="input-part">
             <label for="f-name">First Name</label>
             <input
@@ -71,13 +71,14 @@
               />
               <img
                 class="eye"
+                id="eyepass"
                 src="../asset/logo/eye.svg"
                 alt="show-password"
-                onclick="showPass('password')"
+                onclick="showPass('password','eyepass')"
               />
             </div>
           </div>
-          <button class="btn-login"><a href="./home-withuser.html">Sign Up</a></button>
+          <button class="btn-login"><a>Sign Up</a></button>
         </form>
         <p class="regist-quest">
           Already have account ?

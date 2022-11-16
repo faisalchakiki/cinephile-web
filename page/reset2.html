@@ -51,7 +51,7 @@
         <h1 class="title">Fill your complete password</h1>
         <h1 class="res-mobile hidden">Forgot Password</h1>
         <p class="desc">set your new password</p>
-        <form action="">
+        <form action="" id="set-password">
           <div class="input-part">
             <label for="password">Password</label>
             <div class="wrap-pass">
@@ -64,14 +64,16 @@
               />
               <img
                 class="eye"
+                id="eyepass1"
                 src="../asset/logo/eye.svg"
                 alt="show-password"
-                onclick="showPass('password')"
+                onclick="showPass('password','eyepass1')"
               />
             </div>
           </div>
           <div class="input-part">
             <label for="password">Confirm Password</label>
+            <div class="alert hidden val-pass">*Password harus sama</div>
             <div class="wrap-pass">
               <input
                 type="password"
@@ -82,13 +84,14 @@
               />
               <img
                 class="eye"
+                id="eyepass2"
                 src="../asset/logo/eye.svg"
                 alt="show-password"
-                onclick="showPass('password2')"
+                onclick="showPass('password2','eyepass2')"
               />
             </div>
           </div>
-          <button class="btn-login"><a href="./home-withuser.html">Submit</a></button>
+          <button class="btn-login" type="submit"><a>Submit</a></button>
         </form>
       </section>
     </main>

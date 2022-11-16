@@ -1,8 +1,66 @@
-// let a = document.location.pathname
-// console.log(a)
-if(document.location.pathname == "/index.html" || document.location.pathname == "/page/home-withuser.html" ){
+if (
+  document.location.pathname == "/index.html" ||
+  document.location.pathname == "/page/home-withuser.html"
+) {
+  // Movie Now Showing
+  let proses = async () => {
+    const dataMovie = fetch("http://www.omdbapi.com/?apikey=79673ba&s=sky");
+    const response = await dataMovie; //syntax await return resolve 
+    const data = await response.json();
+    const result = data.Search;
+    result.forEach((value) => {
+      const title = value.Title;
+      const pictures = value.Poster;
+      const idMovie = value.imdbID;
+      const detailMovie = fetch(
+        `http://www.omdbapi.com/?apikey=79673ba&i=${idMovie}`
+      );
+      let proses2 = async () => {
+        const response = await detailMovie;
+        const details = await response.json();
+        const { Genre } = details;
+        // Movie
+        const wrapperMovie = document.getElementById("content-movie");
+        Array(value).forEach(() => {
+          const boxMovie = document.createElement("div");
+          boxMovie.className = "box-movie box-active";
+          const picture = document.createElement("img");
+          picture.src = pictures;
+          picture.alt = "image-movie";
+          picture.loading = "lazy";
+          const textMovie = document.createElement("div");
+          textMovie.className = "text-movie hidden";
+          const titleMovie = document.createElement("h4");
+          titleMovie.className = "title-movie";
+          titleMovie.textContent = title;
+          const genre = document.createElement("p");
+          genre.className = "genre";
+          genre.textContent = Genre;
+          const buttonDetail = document.createElement("button");
+          buttonDetail.className = "details";
+          const details = document.createElement("a");
+          details.href =
+            document.location == "index.html"
+              ? "./page/details-noUser.html"
+              : "../page/details.html";
+          details.textContent = "Details";
+
+          wrapperMovie.appendChild(boxMovie);
+          boxMovie.appendChild(picture);
+          textMovie.appendChild(titleMovie);
+          textMovie.appendChild(genre);
+          buttonDetail.appendChild(details);
+          textMovie.appendChild(buttonDetail);
+          boxMovie.appendChild(textMovie);
+        });
+      };
+      proses2();
+    });
+  };
+  proses();
+
   //Database Movie
-  const dataMovie = [
+  const dataMovieUC = [
     {
       title: "Spiderman-Man Homecoming",
       genre: "Action, Adventure, Sci-FI",
@@ -11,7 +69,7 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
+      synopsis: "",
     },
     {
       title: "Spiderman-Man No Way Home",
@@ -22,8 +80,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Peaky Blinders",
       genre: "Drama, Crime",
@@ -33,8 +91,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "The Walking Dead",
       genre: "Action, Adventure, Drama, Fantasy",
@@ -44,8 +102,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "The Takeover",
       genre: "Action, Crime, Thriller",
@@ -55,8 +113,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Manifest",
       genre: "Drama, Mystery, Sci-FI",
@@ -66,22 +124,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
-  ];
-  
-  const dataMovieUC = [
-    {
-      title: "Manifest",
-      genre: "Drama, Mystery, Sci-FI",
-      image:
-        "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/1xeiUxShzNn8TNdMqy3Hvo9o2R.jpg",
-      dateRelease: "",
-      author: "",
-      casts: "",
-      duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Wild is the Wind",
       genre: "Crime, Drama",
@@ -91,8 +135,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Starwars: Andor",
       genre: "Fantasy, War&Politics, Sci-FI",
@@ -102,8 +146,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Chainsaw Man",
       genre: "Animation, Action, Sci-FI",
@@ -113,8 +157,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
     {
       title: "Overdose",
       genre: "Action, Crime, Thiller",
@@ -124,42 +168,10 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
       author: "",
       casts: "",
       duration: "",
-      synopsis: ""
-      },
+      synopsis: "",
+    },
   ];
-  
-  // Movie
-  const wrapperMovie = document.getElementById("content-movie");
-  dataMovie.forEach((data) => {
-    const boxMovie = document.createElement("div");
-    boxMovie.className = "box-movie box-active";
-    const picture = document.createElement("img");
-    picture.src = data.image;
-    picture.alt = "image-movie";
-    picture.loading = "lazy";
-    const textMovie = document.createElement("div");
-    textMovie.className = "text-movie hidden";
-    const titleMovie = document.createElement("h4");
-    titleMovie.className = "title-movie";
-    titleMovie.textContent = data.title;
-    const genre = document.createElement("p");
-    genre.className = "genre";
-    genre.textContent = data.genre;
-    const buttonDetail = document.createElement("button");
-    buttonDetail.className = "details";
-    const details = document.createElement("a");
-    details.href = document.location == 'index.html' ? "./page/details-noUser.html" : "../page/details.html";
-    details.textContent = "Details";
-  
-    wrapperMovie.appendChild(boxMovie);
-    boxMovie.appendChild(picture);
-    textMovie.appendChild(titleMovie);
-    textMovie.appendChild(genre);
-    buttonDetail.appendChild(details);
-    textMovie.appendChild(buttonDetail);
-    boxMovie.appendChild(textMovie);
-  });
-  
+
   // UpComing Movie
   const wrapperUCMovie = document.getElementById("uc-movies");
   dataMovieUC.forEach((data) => {
@@ -180,9 +192,12 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
     const buttonDetail = document.createElement("button");
     buttonDetail.className = "details";
     const details = document.createElement("a");
-    details.href = document.location == 'index.html' ? "./page/details-noUser.html" : "../page/details.html";
+    details.href =
+      document.location == "index.html"
+        ? "./page/details-noUser.html"
+        : "../page/details.html";
     details.textContent = "Details";
-  
+
     wrapperUCMovie.appendChild(cardMovie);
     cardMovie.appendChild(picture);
     textMovie.appendChild(titleMovie);
@@ -191,9 +206,8 @@ if(document.location.pathname == "/index.html" || document.location.pathname == 
     textMovie.appendChild(buttonDetail);
     cardMovie.appendChild(textMovie);
   });
-}else if(document.location.pathname == "/page/details.html"){
-// Set New Date
-const date = document.getElementById("date") 
-const newDate = date.value = new Date().toISOString().slice(0, 10);
+} else if (document.location.pathname == "/page/details.html") {
+  // Set New Date
+  const date = document.getElementById("date");
+  const newDate = (date.value = new Date().toISOString().slice(0, 10));
 }
-

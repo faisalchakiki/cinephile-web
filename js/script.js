@@ -20,7 +20,7 @@ if (
         const response = await detailMovie;
         const detailsMovie = await response.json();
         const { Genre } = detailsMovie;
-        
+
         // Movie
         const wrapperMovie = document.getElementById("content-movie");
         const boxMovie = document.createElement("div");
@@ -42,7 +42,7 @@ if (
         details.href =
           document.location.pathname == "/" || "/index.html"
             ? "./page/details-noUser.html"
-            : "../page/details.html";
+            : "./details.html";
         details.textContent = "Details";
 
         wrapperMovie.appendChild(boxMovie);

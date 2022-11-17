@@ -5,7 +5,7 @@ if (
   // Movie Now Showing
   let proses = async () => {
     const dataMovie = fetch("http://www.omdbapi.com/?apikey=79673ba&s=sky");
-    const response = await dataMovie; //syntax await return resolve 
+    const response = await dataMovie; //syntax await return resolve
     const data = await response.json();
     const result = data.Search;
     result.forEach((value) => {
@@ -40,7 +40,7 @@ if (
           buttonDetail.className = "details";
           const details = document.createElement("a");
           details.href =
-            document.location == "index.html"
+            document.location.pathname == "index.html"
               ? "./page/details-noUser.html"
               : "../page/details.html";
           details.textContent = "Details";

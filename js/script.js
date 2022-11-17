@@ -40,7 +40,7 @@ if (
         buttonDetail.className = "details";
         const details = document.createElement("a");
         details.href =
-          document.location.pathname == "/" || "/index.html"
+          document.location.pathname === "/" || "/index.html"
             ? "./page/details-noUser.html"
             : "./details.html";
         details.textContent = "Details";
@@ -192,9 +192,9 @@ if (
     buttonDetail.className = "details";
     const details = document.createElement("a");
     details.href =
-      document.location.pathname == "/" || "index.html"
+      document.location.pathname === "/" || "index.html"
         ? "./page/details-noUser.html"
-        : "../page/details.html";
+        : "./details.html";
     details.textContent = "Details";
 
     wrapperUCMovie.appendChild(cardMovie);

@@ -14,7 +14,7 @@ if (
       const pictures = value.Poster;
       const idMovie = value.imdbID;
       const detailMovie = fetch(
-        `http://www.omdbapi.com/?apikey=79673ba&i=${idMovie}`
+        `https://www.omdbapi.com/?apikey=79673ba&i=${idMovie}`
       );
       let proses2 = async () => {
         const response = await detailMovie;

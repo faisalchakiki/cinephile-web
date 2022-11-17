@@ -193,7 +193,7 @@ if (
     buttonDetail.className = "details";
     const details = document.createElement("a");
     details.href =
-      document.location == "index.html"
+      document.location.pathname == "index.html"
         ? "./page/details-noUser.html"
         : "../page/details.html";
     details.textContent = "Details";

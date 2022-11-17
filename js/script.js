@@ -1,4 +1,3 @@
-console.log(document.location.pathname);
 if (
   document.location.pathname == "/" ||
   document.location.pathname == "/index.html" ||
@@ -42,8 +41,8 @@ if (
         const details = document.createElement("a");
         details.href =
           document.location.pathname === "/page/home-withuser.html"
-          ? "./details.html"
-          : "./page/details-noUser.html";
+            ? "./details.html"
+            : "./page/details-noUser.html";
         details.textContent = "Details";
 
         wrapperMovie.appendChild(boxMovie);
@@ -193,9 +192,9 @@ if (
     buttonDetail.className = "details";
     const details = document.createElement("a");
     details.href =
-    document.location.pathname === "/page/home-withuser.html"
-    ? "./details.html"
-    : "./page/details-noUser.html";
+      document.location.pathname === "/page/home-withuser.html"
+        ? "./details.html"
+        : "./page/details-noUser.html";
     details.textContent = "Details";
 
     wrapperUCMovie.appendChild(cardMovie);

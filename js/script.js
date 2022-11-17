@@ -4,7 +4,7 @@ if (
 ) {
   // Movie Now Showing
   let proses = async () => {
-    const dataMovie = fetch("http://www.omdbapi.com/?apikey=79673ba&s=sky");
+    const dataMovie = fetch("https://www.omdbapi.com/?apikey=79673ba&s=sky");
     const response = await dataMovie; //syntax await return resolve
     const data = await response.json();
     const result = data.Search;

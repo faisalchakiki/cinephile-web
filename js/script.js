@@ -27,7 +27,6 @@ if (
           const picture = document.createElement("img");
           picture.src = pictures;
           picture.alt = "image-movie";
-          picture.loading = "lazy";
           const textMovie = document.createElement("div");
           textMovie.className = "text-movie hidden";
           const titleMovie = document.createElement("h4");

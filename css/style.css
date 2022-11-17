@@ -499,7 +499,7 @@ main .content {
 }
 
 .box-active {
-  transition: 0.3s;
+  transition: 1s;
 }
 
 main.upcoming {

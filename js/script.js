@@ -18,41 +18,40 @@ if (
       );
       let proses2 = async () => {
         const response = await detailMovie;
-        const details = await response.json();
-        const { Genre } = details;
+        const detailsMovie = await response.json();
+        const { Genre } = detailsMovie;
+        
         // Movie
         const wrapperMovie = document.getElementById("content-movie");
-        Array(value).forEach(() => {
-          const boxMovie = document.createElement("div");
-          boxMovie.className = "box-movie box-active";
-          const picture = document.createElement("img");
-          picture.src = pictures;
-          picture.alt = "image-movie";
-          const textMovie = document.createElement("div");
-          textMovie.className = "text-movie hidden";
-          const titleMovie = document.createElement("h4");
-          titleMovie.className = "title-movie";
-          titleMovie.textContent = title;
-          const genre = document.createElement("p");
-          genre.className = "genre";
-          genre.textContent = Genre;
-          const buttonDetail = document.createElement("button");
-          buttonDetail.className = "details";
-          const details = document.createElement("a");
-          details.href =
-            document.location.pathname == "/" || "/index.html"
-              ? "./page/details-noUser.html"
-              : "../page/details.html";
-          details.textContent = "Details";
+        const boxMovie = document.createElement("div");
+        boxMovie.className = "box-movie box-active";
+        const picture = document.createElement("img");
+        picture.src = pictures;
+        picture.alt = "image-movie";
+        const textMovie = document.createElement("div");
+        textMovie.className = "text-movie hidden";
+        const titleMovie = document.createElement("h4");
+        titleMovie.className = "title-movie";
+        titleMovie.textContent = title;
+        const genre = document.createElement("p");
+        genre.className = "genre";
+        genre.textContent = Genre;
+        const buttonDetail = document.createElement("button");
+        buttonDetail.className = "details";
+        const details = document.createElement("a");
+        details.href =
+          document.location.pathname == "/" || "/index.html"
+            ? "./page/details-noUser.html"
+            : "../page/details.html";
+        details.textContent = "Details";
 
-          wrapperMovie.appendChild(boxMovie);
-          boxMovie.appendChild(picture);
-          textMovie.appendChild(titleMovie);
-          textMovie.appendChild(genre);
-          buttonDetail.appendChild(details);
-          textMovie.appendChild(buttonDetail);
-          boxMovie.appendChild(textMovie);
-        });
+        wrapperMovie.appendChild(boxMovie);
+        boxMovie.appendChild(picture);
+        textMovie.appendChild(titleMovie);
+        textMovie.appendChild(genre);
+        buttonDetail.appendChild(details);
+        textMovie.appendChild(buttonDetail);
+        boxMovie.appendChild(textMovie);
       };
       proses2();
     });

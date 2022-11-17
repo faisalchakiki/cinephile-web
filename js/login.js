@@ -1,7 +1,6 @@
 // Show Password
 function showPass(password, eye) {
   const eyes = document.getElementById(eye);
-  console.log(eye);
   var pass = document.getElementById(password);
   if (pass.type === "password") {
     pass.type = "text";

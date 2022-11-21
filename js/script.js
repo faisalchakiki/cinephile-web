@@ -23,35 +23,42 @@ if (
 
         // Movie
         const wrapperMovie = document.getElementById("content-movie");
+        
         const boxMovie = document.createElement("div");
         boxMovie.className = "box-movie box-active";
+        wrapperMovie.appendChild(boxMovie);
+        
         const picture = document.createElement("img");
         picture.src = pictures;
         picture.alt = "image-movie";
+        boxMovie.appendChild(picture);
+        
         const textMovie = document.createElement("div");
         textMovie.className = "text-movie hidden";
+        boxMovie.appendChild(textMovie);
+        
         const titleMovie = document.createElement("h4");
         titleMovie.className = "title-movie";
         titleMovie.textContent = title;
+        textMovie.appendChild(titleMovie);
+        
         const genre = document.createElement("p");
         genre.className = "genre";
         genre.textContent = Genre;
+        textMovie.appendChild(genre);
+        
         const buttonDetail = document.createElement("button");
         buttonDetail.className = "details";
+        textMovie.appendChild(buttonDetail);
+        
         const details = document.createElement("a");
         details.href =
-          document.location.pathname === "/page/home-withuser.html"
-            ? "./details.html"
-            : "./page/details-noUser.html";
+        document.location.pathname === "/page/home-withuser.html"
+        ? "./details.html"
+        : "./page/details-noUser.html";
         details.textContent = "Details";
-
-        wrapperMovie.appendChild(boxMovie);
-        boxMovie.appendChild(picture);
-        textMovie.appendChild(titleMovie);
-        textMovie.appendChild(genre);
         buttonDetail.appendChild(details);
-        textMovie.appendChild(buttonDetail);
-        boxMovie.appendChild(textMovie);
+        
       };
       proses2();
     });

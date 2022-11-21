@@ -1,7 +1,7 @@
 // Show Password
 function showPass(password, eye) {
   const eyes = document.getElementById(eye);
-  var pass = document.getElementById(password);
+  let pass = document.getElementById(password);
   if (pass.type === "password") {
     pass.type = "text";
     eyes.classList.add("active-eye");
@@ -31,10 +31,10 @@ if (document.location.pathname == "/page/sign-in.html") {
     }
   });
   document.getElementById("email").addEventListener("click", () => {
-    alertEmail.classList.add("hidden");
+    alert.classList.add("hidden");
   });
   document.getElementById("password").addEventListener("click", () => {
-    alertPass.classList.add("hidden");
+    alert.classList.add("hidden");
   });
 } else if (document.location.pathname == "/page/sign-up.html") {
   const register = document.getElementById("register-form");

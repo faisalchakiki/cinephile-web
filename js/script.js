@@ -4,63 +4,64 @@ if (
   document.location.pathname == "/page/home-withuser.html"
 ) {
   // Movie Now Showing
+  
+  //memproses data data dari api 
   let proses = async () => {
-    const dataMovie = fetch("https://www.omdbapi.com/?apikey=79673ba&s=sky");
+    const dataMovie = fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?api_key=1201742989a654711ed4998c2dc41085&language=en-US&page=1"
+    );
     const response = await dataMovie; //syntax await return resolve
     const data = await response.json();
-    const result = data.Search;
+    const result = data.results;
     result.forEach((value) => {
-      const title = value.Title;
-      const pictures = value.Poster;
-      const idMovie = value.imdbID;
-      const detailMovie = fetch(
-        `https://www.omdbapi.com/?apikey=79673ba&i=${idMovie}`
-      );
-      let proses2 = async () => {
-        const response = await detailMovie;
-        const detailsMovie = await response.json();
-        const { Genre } = detailsMovie;
+      const title = value.original_title;
+      const posterMovie = `https://www.themoviedb.org/t/p/w220_and_h330_face${value.poster_path}`;
+      console.log(posterMovie);
+      // let proses2 = async () => {
+      //   const response = await detailMovie;
+      //   const detailsMovie = await response.json();
+      //   const { Genre } = detailsMovie;
 
-        // Movie
-        const wrapperMovie = document.getElementById("content-movie");
-        
-        const boxMovie = document.createElement("div");
-        boxMovie.className = "box-movie box-active";
-        wrapperMovie.appendChild(boxMovie);
-        
-        const picture = document.createElement("img");
-        picture.src = pictures;
-        picture.alt = "image-movie";
-        boxMovie.appendChild(picture);
-        
-        const textMovie = document.createElement("div");
-        textMovie.className = "text-movie hidden";
-        boxMovie.appendChild(textMovie);
-        
-        const titleMovie = document.createElement("h4");
-        titleMovie.className = "title-movie";
-        titleMovie.textContent = title;
-        textMovie.appendChild(titleMovie);
-        
-        const genre = document.createElement("p");
-        genre.className = "genre";
-        genre.textContent = Genre;
-        textMovie.appendChild(genre);
-        
-        const buttonDetail = document.createElement("button");
-        buttonDetail.className = "details";
-        textMovie.appendChild(buttonDetail);
-        
-        const details = document.createElement("a");
-        details.href =
+      // Movie
+      const wrapperMovie = document.getElementById("content-movie");
+
+      const boxMovie = document.createElement("div");
+      boxMovie.className = "box-movie box-active";
+      wrapperMovie.appendChild(boxMovie);
+
+      const picture = document.createElement("img");
+      picture.src = posterMovie;
+      picture.alt = "image-movie";
+      boxMovie.appendChild(picture);
+
+      const textMovie = document.createElement("div");
+      textMovie.className = "text-movie hidden";
+      boxMovie.appendChild(textMovie);
+
+      const titleMovie = document.createElement("h4");
+      titleMovie.className = "title-movie";
+      titleMovie.textContent = title;
+      textMovie.appendChild(titleMovie);
+
+      const genre = document.createElement("p");
+      genre.className = "genre";
+      genre.textContent = "ini genre";
+      textMovie.appendChild(genre);
+
+      const buttonDetail = document.createElement("button");
+      buttonDetail.className = "details";
+      textMovie.appendChild(buttonDetail);
+
+      const details = document.createElement("a");
+      details.href =
         document.location.pathname === "/page/home-withuser.html"
-        ? "./details.html"
-        : "./page/details-noUser.html";
-        details.textContent = "Details";
-        buttonDetail.appendChild(details);
-        
-      };
-      proses2();
+          ? "./details.html"
+          : "./page/details-noUser.html";
+      details.textContent = "Details";
+      buttonDetail.appendChild(details);
+
+      // };
+      // proses2();
     });
   };
   proses();

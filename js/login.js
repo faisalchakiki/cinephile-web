@@ -13,8 +13,7 @@ function showPass(password, eye) {
 
 if (document.location.pathname == "/page/sign-in.html") {
   // Validation login
-  let alertEmail = document.querySelector(".val-email");
-  let alertPass = document.querySelector(".val-pass");
+  let alertResponse = document.querySelector(".alert");
   let login = document.getElementById("login-form");
   login.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -23,18 +22,24 @@ if (document.location.pathname == "/page/sign-in.html") {
     if (valueEmail == "root@admin.com" && valuePass == "rahasia") {
       document.location.href = "../page/manage-movie.html";
     } else if (valueEmail != "faisal@gmail.com") {
-      alertEmail.classList.remove("hidden");
+      alertResponse.classList.remove("hidden");
     } else if (valuePass != "123") {
-      alertPass.classList.remove("hidden");
+      alertResponse.classList.remove("hidden");
     } else {
-      document.location.href = "../page/home-withuser.html";
+      alertResponse.classList.remove("hidden");
+      // alertResponse.style.color="black";
+      alertResponse.style.backgroundColor = "green";
+      alertResponse.textContent = "Login Success, wait is processing";
+      setInterval(()=>{
+        document.location.href = "../page/home-withuser.html";
+      },2500)
     }
   });
   document.getElementById("email").addEventListener("click", () => {
-    alert.classList.add("hidden");
+    alertResponse.classList.add("hidden");
   });
   document.getElementById("password").addEventListener("click", () => {
-    alert.classList.add("hidden");
+    alertResponse.classList.add("hidden");
   });
 } else if (document.location.pathname == "/page/sign-up.html") {
   const register = document.getElementById("register-form");

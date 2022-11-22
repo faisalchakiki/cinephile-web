@@ -13,9 +13,9 @@
       <section class="left-content">
         <div class="overlay">
           <img
-            class="logo"
-            src="../asset/logo/tickitz.svg"
-            alt="tickitz logo"
+          class="logo"
+          src="../asset/logo/tickitz.svg"
+          alt="tickitz logo"
           />
           <p class="motto">wait, watch, wow!</p>
         </div>
@@ -29,35 +29,34 @@
         <form action="" id="login-form">
           <div class="input-part">
             <label for="email">Email</label>
-            <div class="alert hidden val-email">*Email anda kurang tepat</div>
             <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Write your email"
-              required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Write your email"
+            required
             />
           </div>
           <div class="input-part">
             <label for="password">Password</label>
-            <div class="alert hidden val-pass">*Password anda kurang tepat</div>
             <div class="wrap-pass">
               <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Write your password"
-                required
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Write your password"
+              required
               />
               <img
-                class="eye"
-                id="eyepass"
-                src="../asset/logo/eye.svg"
-                alt="show-password"
-                onclick="showPass('password','eyepass')"
+              class="eye"
+              id="eyepass"
+              src="../asset/logo/eye.svg"
+              alt="show-password"
+              onclick="showPass('password','eyepass')"
               />
             </div>
           </div>
+          <div class="alert hidden">Email or Password Not Found</div>
           <button type="submit" class="btn-login"><a>Sign In</a></button>
         </form>
         <p class="regist-quest">
@@ -72,4 +71,5 @@
     </main>
     <script src="../js/login.js"></script>
   </body>
-</html>
+  </html>
+  
